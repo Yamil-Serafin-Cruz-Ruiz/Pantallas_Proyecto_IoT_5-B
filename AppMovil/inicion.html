@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Smart Door - Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Cambiado a min-height para manejar alturas pequeñas de contenido */
+      
+    }
+
+    .content-container {
+
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Agregado para que los elementos absolutos sean relativos a este contenedor */
+    }
+
+    header {
+        border-radius: 40px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .smart-door-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .door-control {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .door-status, .dog-status, .lights-control, .lock-control {
+      margin-bottom: 20px;
+    }
+
+    footer {
+        margin-top: 10%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: absolute; /* Cambiado a posición absoluta */
+      bottom: 0;
+      width: 90%;
+      border-radius: 40px;
+    }
+
+    .settings-button {
+        margin-top: 10px;
+      margin-left: 350px;  
+      top: 10px;
+      right: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .img{
+        max-width: 10%;
+        margin-left: 380px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content-container">
+    <header>
+      <h1>Smart Door</h1>
+    </header>
+
+    <div class="smart-door-title">Estado de la Puerta</div>
+    <img src="perro.png" alt="" class="img">
+    <button class="settings-button" onclick="irAConfiguraciones()">Configuraciones</button>
+
+    <div class="door-control">
+      <img src="a.png" alt="Puerta" style="max-width: 30%;margin-top: -130px;">
+      <div>
+        <button onclick="cerrarPuerta()">Cerrar Puerta</button>
+        <button onclick="abrirPuerta()">Abrir Puerta</button>
+      </div>
+    </div>
+
+    <div class="door-status">
+      <h3>Estado de la Puerta:</h3>
+      <p id="doorStatus">Cerrada</p>
+    </div>
+
+    <div class="dog-status">
+      <h3>Detectar Perro:</h3>
+      <p id="dogStatus">Dentro</p>
+    </div>
+
+    <div class="lights-control">
+      <h3>Control de Luces:</h3>
+      <button onclick="encenderLuces()">Encender Luces</button>
+    </div>
+
+    <div class="lock-control">
+      <h3>Poner Seguro:</h3>
+      <button onclick="ponerSeguro()">Poner Seguro</button>
+    </div>
+
+    <footer>
+      Derechos Reservados &copy; 2024
+    </footer>
+
+   
+  </div>
+
+  <script>
+    function cerrarPuerta() {
+      document.getElementById('doorStatus').innerText = 'Cerrada';
+    }
+
+    function abrirPuerta() {
+      document.getElementById('doorStatus').innerText = 'Abierta';
+    }
+
+    function encenderLuces() {
+      alert('Luces encendidas');
+    }
+
+    function ponerSeguro() {
+      alert('Seguro activado');
+    }
+
+    function irAConfiguraciones() {
+      alert('Ir a Configuraciones');
+      window.location.href = 'ajustes.html';
+    }
+  </script>
+</body>
+</html>

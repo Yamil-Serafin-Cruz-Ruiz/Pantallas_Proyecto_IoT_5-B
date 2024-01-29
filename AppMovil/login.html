@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Iniciar Sesión</title>
+
+</head>
+<body>
+    <div class="login-container">
+      <img src="perro.png" alt="" class="img">
+      <h1>SMART DOOR</h1>
+      <h2>Iniciar Sesión</h2>
+      <form>
+        <div class="form-group">
+          <label for="usuario">Usuario:</label>
+          <input type="text" id="usuario" name="usuario" required>
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+        <div class="form-group">
+          <button type="button" onclick="redirigirInicio()">Iniciar Sesión</button>
+        </div>
+      </form>
+    </div>
+  
+    <script>
+      function redirigirInicio() {
+        window.location.href = 'inicion.html';
+      }
+    </script>
+  </body>
+  </html>

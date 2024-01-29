@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Modificaciones - Smart Door</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Cambiado a min-height para manejar alturas pequeñas de contenido */
+      
+    }
+
+    .modification-container {
+        max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      position: relative; /* Agregado para que los elementos absolutos sean relativos a este contenedor */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .color-theme {
+      margin-bottom: 20px;
+    }
+
+    .logout, .send-report, .adjust-volume, .contact-advisor, .configure-schedule {
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      bottom: 0;
+      width: 89%;
+      border-radius: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="modification-container">
+    <header>
+      <h1>Modificaciones - Smart Door</h1>
+    </header>
+
+    <h2>Cambiar Color del Tema</h2>
+    <div class="color-theme">
+      <!-- Agrega aquí tus opciones para cambiar el color del tema -->
+    </div>
+
+    <h2>Cerrar Sesión</h2>
+    <button class="logout" onclick="cerrarSesion()">Cerrar Sesión</button>
+
+    <h2>Enviar Informe</h2>
+    <button class="send-report" onclick="enviarInforme()">Enviar Informe</button>
+
+    <h2>Ajustar Volumen</h2>
+    <input type="range" class="adjust-volume" min="0" max="100" step="1" value="50" onchange="ajustarVolumen(this.value)">
+    <span id="volumeValue">50</span>
+
+    <h2>Contactar Asesor</h2>
+    <button class="contact-advisor" onclick="contactarAsesor()">Contactar Asesor</button>
+
+    <h2>Configurar Horarios</h2>
+    <button class="configure-schedule" onclick="configurarHorarios()">Configurar Horarios</button>
+
+    <div class="footer">
+      Derechos Reservados &copy; 2024
+    </div>
+  </div>
+
+  <script>
+    function cerrarSesion() {
+      // Agrega aquí la lógica para cerrar sesión
+      alert('Sesión cerrada');
+    }
+
+    function enviarInforme() {
+      // Agrega aquí la lógica para enviar informe
+      alert('Informe enviado');
+    }
+
+    function ajustarVolumen(value) {
+      document.getElementById('volumeValue').innerText = value;
+      // Agrega aquí la lógica para ajustar el volumen
+    }
+
+    function contactarAsesor() {
+      // Agrega aquí la lógica para contactar al asesor
+      alert('Contactando a un asesor');
+    }
+
+    function configurarHorarios() {
+      // Agrega aquí la lógica para configurar horarios
+      alert('Configurando horarios');
+    }
+  </script>
+</body>
+</html>
